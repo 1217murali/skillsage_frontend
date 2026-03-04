@@ -13,10 +13,14 @@ const MOON_IMAGE_PATH = '/moon.png';
 
 
 // Configuration for the Gemini API call
-// Configuration for the Gemini API call
-const MODEL_NAME = 'gemini-flash-latest';
-const API_URL_BASE = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL_NAME}:generateContent`;
-const apiKey = "AIzaSyALCnpXL80VY3hi6ASsrjY24SAAk4wvtM0"; // Canvas environment automatically provides API key if this is empty
+// Values are read from .env using Vite's VITE_ prefix.  Ensure you
+// restart the dev server after editing the .env file.
+const MODEL_NAME = import.meta.env.VITE_MODEL_NAME || 'gemini-flash-latest';
+console.log('MODEL_NAME', MODEL_NAME);
+
+// Base URL without the model name; defaults to the standard endpoint
+const API_URL_BASE = `${import.meta.env.VITE_API_URL_BASE || 'https://generativelanguage.googleapis.com/v1beta/models'}/${MODEL_NAME}:generateContent`;
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY || ''; // blank will cause request failures
 
 // System instruction defines the AI's persona and rules
 const healthGymSystemInstruction = {
