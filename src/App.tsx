@@ -11,6 +11,7 @@ import { Dashboard } from './pages/Dashboard';
 import Interview from './pages/Interview';
 import { Resume } from './pages/Resume';
 import { Learning } from './pages/Learning';
+import EAPCETPredictor from './pages/EAPCETPredictor';
 import { Profile } from './pages/Profile';
 import { ForgotPassword } from './pages/ForgotPassword';
 import VoiceApp from "./pages/VoiceApp";
@@ -85,6 +86,7 @@ function App() {
                     <Route path="p2p-interview" element={<PrivateRoute><P2PInterview /></PrivateRoute>} />
                     <Route path="resume" element={<PrivateRoute><Resume /></PrivateRoute>} />
                     <Route path="learning" element={<PrivateRoute><Learning /></PrivateRoute>} />
+                    <Route path="eapcet-predictor" element={<PrivateRoute><EAPCETPredictor /></PrivateRoute>} />
                     <Route path="profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
 
                     {/* DEDICATED DSA COURSE ROUTE */}
