@@ -8,6 +8,7 @@ import {
   FileText,
   MessageSquare,
   GraduationCap,
+  Target,
   Menu,
   X,
 } from 'lucide-react';
@@ -22,6 +23,7 @@ export function Layout() {
     { name: 'Interview', href: '/interview', icon: MessageSquare },
     { name: 'Resume', href: '/resume', icon: FileText },
     { name: 'Learning', href: '/learning', icon: GraduationCap },
+    { name: 'Predictor', href: '/eapcet-predictor', icon: Target },
     { name: 'Profile', href: '/profile', icon: User },
   ];
 
